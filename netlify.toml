@@ -1,8 +1,2 @@
 [functions]
 directory = "netlify/functions"
-
-# Send everything under /api/* to the function
-[[redirects]]
-from = "/api/*"
-to = "/.netlify/functions/rap"
-status = 200
