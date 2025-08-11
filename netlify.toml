@@ -1,14 +1,8 @@
 [functions]
 directory = "netlify/functions"
 
-# /api/<anything> -> single record
+# Forward /api/<anything> to the function as /.netlify/functions/rap/<anything>
 [[redirects]]
 from = "/api/*"
-to = "/.netlify/functions/rap?name=:splat"
-status = 200
-
-# /api -> full object
-[[redirects]]
-from = "/api"
-to = "/.netlify/functions/rap"
+to   = "/.netlify/functions/rap/:splat"
 status = 200
