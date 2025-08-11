@@ -1,8 +1,8 @@
 [functions]
 directory = "netlify/functions"
 
-# Forward /api/<anything> to the function as /.netlify/functions/rap/<anything>
+# Send everything under /api/* to the function
 [[redirects]]
 from = "/api/*"
-to   = "/.netlify/functions/rap/:splat"
+to = "/.netlify/functions/rap"
 status = 200
