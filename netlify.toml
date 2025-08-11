@@ -1,18 +1,14 @@
 [functions]
 directory = "netlify/functions"
 
-# Optional: if you have an /index.html at the root, Netlify will serve it automatically.
-
-# Keep your original class route shapes:
-# GET /api           -> returns whole object
-# GET /api/:name     -> returns one record
-
+# /api -> full object
 [[redirects]]
 from = "/api"
 to = "/.netlify/functions/rap"
 status = 200
 
+# /api/<anything> -> single record (?name=<anything>)
 [[redirects]]
-from = "/api/:name"
-to = "/.netlify/functions/rap?name=:name"
+from = "/api/*"
+to = "/.netlify/functions/rap?name=:splat"
 status = 200
