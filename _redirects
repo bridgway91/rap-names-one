@@ -1,1 +1,2 @@
-/api/*   /.netlify/functions/rap/:splat   200
+/api        /.netlify/functions/rap          200
+/api/*      /.netlify/functions/rap/:splat   200
